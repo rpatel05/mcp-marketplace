@@ -110,6 +110,19 @@ If a skill doesn't work:
 | `discover-opportunities` | Finds product opportunities across analytics, experiments, and replays   |
 | `compare-user-journeys`  | Compares two user groups side-by-side                                    |
 
+### Reliability & Error Diagnosis
+
+| Skill                  | What it does                                                              |
+| ---------------------- | ------------------------------------------------------------------------- |
+| `diagnose-errors`      | Investigates errors across custom error events to triage what's broken    |
+| `monitor-reliability`  | Proactive reliability health check with KPI trends and page health scores |
+
+### Account Health (B2B)
+
+| Skill                  | What it does                                                              |
+| ---------------------- | ------------------------------------------------------------------------- |
+| `analyze-account-health` | Analyzes B2B account usage, engagement, risk signals, and expansion opportunities using Group Analytics |
+
 ### Session Replay & Debugging
 
 | Skill             | What it does                                                              |
@@ -167,6 +180,7 @@ plugins/
     .codex-plugin/
       plugin.json           # Codex plugin manifest
     skills/
+      analyze-account-health/
       analyze-board/
       analyze-experiment/
       analyze-feedback/
@@ -178,12 +192,14 @@ plugins/
       create-report/
       daily-brief/
       debug-replay/
+      diagnose-errors/
       diff-intake/
       discover-analytics-patterns/
       discover-event-surfaces/
       discover-opportunities/
       instrument-events/
       monitor-experiments/
+      monitor-reliability/
       replay-ux-audit/
       taxonomy/
       update-lexicon/

@@ -26,6 +26,13 @@ Expert product analytics skills for Mixpanel. This plugin provides comprehensive
 - **update-lexicon**: Bulk update event and property metadata
 - **taxonomy**: Generate and enforce event/property naming conventions
 
+### Reliability & Errors
+- **diagnose-errors**: Investigate errors across custom error events to triage what's broken
+- **monitor-reliability**: Proactive reliability health check with KPI trends and page health scores
+
+### Account Health (B2B)
+- **analyze-account-health**: Analyze B2B account usage, engagement, risk signals, and expansion opportunities using Group Analytics
+
 ### Session Replay
 - **debug-replay**: Convert bug reports into numbered repro steps
 - **replay-ux-audit**: Synthesize friction points across multiple replays
