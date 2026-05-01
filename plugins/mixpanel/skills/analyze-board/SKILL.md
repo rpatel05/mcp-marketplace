@@ -16,7 +16,7 @@ description: Deeply analyze Mixpanel boards by analyzing key reports, surfacing 
 
 ### Step 1: Retrieve the Board
 
-Use `Mixpanel:Get-Dashboard` with the dashboard ID to get the full structure and report IDs.
+Use `Get-Dashboard` with the dashboard ID to get the full structure and report IDs.
 
 ### Step 2: Query Key Reports
 
@@ -26,7 +26,7 @@ Query up to 3-5 reports at a time. Prioritize:
 2. Reports with recent changes
 3. Trend-based visualizations
 
-Use `Mixpanel:Run-Query` for each report.
+Use `Run-Query` for each report.
 
 ### Step 3: Analyze Patterns
 

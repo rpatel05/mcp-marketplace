@@ -40,7 +40,7 @@ When the user's request is ambiguous or could map to multiple events:
 
 **Search for events:**
 ```
-Mixpanel:Get-Events or Mixpanel:Get-Event-Details
+Get-Events (use include_details=true for full metadata)
 ```
 - Search ONE concept at a time
 - Use broad search terms first (e.g., "purchase" not just "purchase completed")
@@ -56,7 +56,7 @@ Mixpanel:Get-Events or Mixpanel:Get-Event-Details
 
 **Verify before use:**
 - Check event has actual volume (not zero/stale)
-- Get properties with Mixpanel:Get-Property-Names and Mixpanel:Get-Property-Values
+- Get properties with `Get-Properties` and `Get-Property-Values`
 - If zero results, search for alternatives
 
 ## Report Type Selection
@@ -137,13 +137,13 @@ Mixpanel:Get-Events or Mixpanel:Get-Event-Details
 
 1. **Get project context:**
 ```
-Mixpanel:Get-Projects (to get project_id)
+Get-Projects (to get project_id)
 ```
 
 2. **Discover events** (BROAD search first):
 ```
-Mixpanel:Get-Events for general event list
-Mixpanel:Get-Event-Details for specific event info
+Get-Events for general event list
+Get-Events with event_names=[...] and include_details=true for specific event info
 ```
 
 3. **Find cohorts if needed:**
@@ -157,7 +157,7 @@ List cohorts from Lexicon or query
 
 **For simple queries** (single event, no breakdowns/filters):
 ```
-Mixpanel:Run-Query(
+Run-Query(
   project_id=X,
   report_type='insights',
   report={
@@ -179,7 +179,7 @@ Mixpanel:Run-Query(
 
 1. **First, get the full schema:**
    ```
-   Mixpanel:Get-Query-Schema(report_type='insights')
+   Get-Query-Schema(report_type='insights')
    ```
    This returns the complete JSON schema showing all available options
 
@@ -192,7 +192,7 @@ Mixpanel:Run-Query(
 
 3. **Run the query:**
    ```
-   Mixpanel:Run-Query(
+   Run-Query(
      project_id=X,
      report_type='insights',
      report={...full query following schema...}
@@ -236,7 +236,7 @@ Mixpanel:Run-Query(
 
 **Verification:**
 - Always verify event exists before using
-- Check properties with Get-Property-Names
+- Check properties with `Get-Properties`
 - Confirm values with Get-Property-Values
 
 **Comparisons:**

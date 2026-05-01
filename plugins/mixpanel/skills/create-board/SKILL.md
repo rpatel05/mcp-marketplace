@@ -46,7 +46,7 @@ This skill helps you create a new Mixpanel board with one or more reports. Board
    **Step 4a: Create reports and collect query_ids**
    - For each report you want on the board, run:
      ```
-     Mixpanel:Run-Query(
+     Run-Query(
        project_id=X,
        report_type='insights',  # or 'funnels', 'flows', 'retention'
        report={...report definition...},
@@ -59,7 +59,7 @@ This skill helps you create a new Mixpanel board with one or more reports. Board
    **Step 4b: Create the dashboard**
    - Use `Create-Dashboard` with collected query_ids:
      ```
-     Mixpanel:Create-Dashboard(
+     Create-Dashboard(
        project_id=X,
        title="Dashboard Name",
        rows=[

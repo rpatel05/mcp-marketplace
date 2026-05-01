@@ -95,7 +95,7 @@ For each segment, get:
 - Days active in the window
 
 Use Mixpanel queries:
-- `Mixpanel:Run-Query` with segment filters
+- `Run-Query` with segment filters
 - Flow analysis to see paths
 - Funnel analysis for conversion steps
 
